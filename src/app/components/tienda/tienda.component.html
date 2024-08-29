@@ -1,0 +1,52 @@
+
+<div class="col-lg-12" [@fadeIn]>
+    <a class="boton_activo btn btn-success"
+    [@marcar]="status" (click)="cambiarEstado(status)">
+    <span *ngIf="status == 'inactive'">Boton inactivo</span>
+    <span *ngIf="status == 'active'">Boton activo</span></a>
+
+    <hr>
+    <h4>Animaciones CSS3</h4>
+    <a class="boton_transiciones">Transiciones</a>
+    <div class="clearfix"></div>
+    <br>
+    <div class="caja_animada"></div>
+
+    <hr>
+    Padre:
+    <h1>{{titulo}}</h1>
+    <ul>
+        <li>Camiseta Azul</li>
+        <li>Gorra negra</li>
+    </ul>
+
+    <hr>
+
+    <p>
+        Nombre del parque:
+        <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()">
+    </p>
+
+    <p>
+        Resultado: {{nombreDelParque}}
+    </p>
+
+    <div>
+        <h4>Datos de mi parque desde el hijo</h4>
+            <ol *ngIf="miParque">
+                <li>{{miParque.nombre}}</li>
+                <li>{{miParque.metros}}</li>
+                <li>{{miParque.vegetacion}}</li>
+                <li>{{miParque.abierto}}</li>
+            </ol>
+    </div>
+    <hr>
+
+    <p *ngIf="nombreDelParque">
+        Hijo: 
+        <app-parques [nombre]="nombreDelParque"
+                    [metros_cuadrados]="567"
+                    (pasameDatos)="verDatosParque($event)"
+                    ></app-parques> 
+    </p>
+</div>

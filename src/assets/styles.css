@@ -1,0 +1,22 @@
+.container-fluid{
+    margin-top: 3px;
+}
+
+.container-fluid li{
+    margin-right: 10px;
+}
+
+.col-lg-12{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#container{
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #ccc;
+}   
+
+.container-fluid .active{
+    border-bottom: 3px solid red;
+}

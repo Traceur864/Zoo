@@ -1,0 +1,66 @@
+.boton_transiciones{
+    padding: 10px;
+    background: rgb(10, 145, 127);
+    color: white;
+    border-radius: 20px;
+    border: 2px solid rgb(7, 92, 81);
+    text-decoration: none;
+    transition: all 1s;
+    width: 100px;
+}
+
+.boton_transiciones:hover{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    background: #ccc;
+    border: 1px solid red;
+    display: block;
+}
+
+.caja_animada{
+    margin-top: 10px;
+    background: green;
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    /*
+    animation-name: rotacion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    */
+}
+
+@keyframes rotacion{
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes deslizamiento{
+    0% { 
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 400px;
+        background: paleturquoise;
+    }
+    100%{
+        margin-left: 0px;
+        background: yellowgreen;
+    }
+}
+
+@keyframes deslizamiento1{
+    from { 
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 400px;
+        background: paleturquoise;
+    }
+}

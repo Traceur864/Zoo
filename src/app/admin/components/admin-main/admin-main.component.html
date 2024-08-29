@@ -1,0 +1,31 @@
+<!-- <div class="col-lg-4">
+    <h3>{{title}}</h3>
+    <div class="sidebar-admin" data-example-id="sample-nav-stacked">
+        <ul class="nav nav-pills nav-stacked nav-pill-stacked-example" >
+            <li role="presentation" [routerLinkActive]="['active']">
+                <a [routerLink]="['listado']">Listaditos</a>
+            </li>
+            <li role="presentation" [routerLinkActive]="['active']">
+                <a [routerLink]="['crear']">Crear</a>
+            </li>
+            <li role="presentation" [routerLinkActive]="['active']">
+                <a [routerLink]="['listado']">Informacion</a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<div class="col-lg-4">
+    <h3>{{title}}</h3>
+    <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" role="tab" aria-controls="list-home" [routerLinkActive]="['active']" [routerLink]="['listado']">Listado</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="list-profile" [routerLink]="['crear']">Crear</a>
+    <!-- <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" role="tab" aria-controls="list-messages">Messages</a>
+    <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" role="tab" aria-controls="list-settings">Settings</a> -->
+    </div>
+</div>
+
+
+<div class="col-lg-8">  
+<router-outlet></router-outlet>
+</div>

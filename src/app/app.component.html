@@ -1,0 +1,71 @@
+<!-- <div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navabar-header">
+        <a  class="navbar-brand"></a>
+      </div>
+      
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/home']">Inicio</a>
+        </li>
+        <li><a [routerLink]="['/animales']">Animales</a>
+        </li>
+        <li><a [routerLink]="['/cuidadores']">Cuidadores</a>
+        </li>
+        <li><a [routerLink]="['/tienda']">Tienda</a>
+        </li>
+        <li><a [routerLink]="['/contacto']">Contacto</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+</div> -->
+
+<nav class="navbar navbar-expand-lg bg-primary" >
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/home']" [routerLinkActive]="['active']"><i class="bi bi-house" style="margin-right: 5px;"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/animales']" [routerLinkActive]="['active']"><i class="bi bi-star" style="margin-right: 5px;"></i>Animales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cuidadores']" [routerLinkActive]="['active']"><i class="bi bi-person-square" style="margin-right: 5px;"></i>Cuidadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tienda']" [routerLinkActive]="['active']"><i class="bi bi-shop" style="margin-right: 5px;"></i>Tienda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contacto']" [routerLinkActive]="['active']"><i class="bi bi-envelope" style="margin-right: 5px;"></i>Contacto</a>
+        </li>
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+<div class="col-lg-12">
+  <router-outlet></router-outlet>
+</div>
+
+
+  
+
+
+
+
+<footer style="margin-left: 1%; margin-top: 2%;">
+  Pagina reservada por Edwin Carpio &copy;
+</footer>
